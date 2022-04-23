@@ -11,11 +11,13 @@ namespace Save
 
 		private void OnEnable()
 		{
+			if (SavingSystem.instance == null) return;
 			SavingSystem.instance.Subscribe(this);
 		}
 
 		private void OnDisable()
 		{
+			if (SavingSystem.instance == null) return;
 			SavingSystem.instance.UnSubscribe(this);
 		}
 
@@ -24,6 +26,7 @@ namespace Save
 		{
 			GenerateUniqueID();
 		}
+
 		/// <summary>
 		/// Method <c>GenerateUniqueID</c> Private function to generate unique ID if one does not exist
 		/// </summary>
@@ -35,7 +38,7 @@ namespace Save
 			}
 		}
 
-		
+
 		//required for ISerializationCallbackReceiver interface
 		public void OnAfterDeserialize()
 		{
@@ -54,6 +57,7 @@ namespace Save
 
 			return saveData;
 		}
+
 		/// <summary>
 		/// Method <c>LoadState</c> Public function that gets all components implementing ISaveLoad on this object add disseminates saveData to them
 		/// </summary>

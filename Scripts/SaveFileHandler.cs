@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Save
 {
-	public class SaveFileHandler
+	public class SaveFileHandler : ISaveLoadIO
 	{
 		private readonly string dataPath;
 		private readonly string dataFileName;
