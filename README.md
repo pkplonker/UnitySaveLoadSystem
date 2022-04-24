@@ -14,13 +14,13 @@
 - SaveableGameObject should be included on any gameobject that has a component implementing ISaveLoad. Observer pattern
 - SavingSystem is the core functionality with public functions to save/load. Singleton pattern
 - SavefileHandlder handles file IO
-- SaveLoadExternalMediator can be modified to change which class is currently being used as IO handler by changing to any class implementing ISaveLoadIO. Mediator Pattenen.
+- SaveLoadExternalMediator can be modified to change which class is currently being used as IO handler by changing to any class implementing ISaveLoadIO. Mediator Pattern.
 - SerializableVector is a simple wrapper for Vector3 to allow serialization of Vector data
 
 
 Inspired by https://www.youtube.com/watch?v=yIsoAuOOG7Q
 
-#### Improvements made
+#### Improvements made beyond original scope
 -  Automatic ID generation
 -  Removal of FindObjectsOfType in favor of observer pattern
 -  Mediator pattern for external save load
